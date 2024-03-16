@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1710603537 source:c:\users\elmouelhi\desktop\pilelinked\stacks_using_linked-list\stack_linked\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1710603723 c:\users\elmouelhi\desktop\pilelinked\stacks_using_linked-list\stack_linked\stack.h
+
