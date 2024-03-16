@@ -5,12 +5,26 @@
 int main()
 {
     Stacks * MyStack;
-
+    data *delvar;
+printf("<<<<<<<< STACK ELEMENTS >>>>>>>>\n\n\n");
     MyStack = Create_Stack(22);
-    pop(23,MyStack);
-    pop(24,MyStack);
-    pop(25,MyStack);
+    Push(23,MyStack);
+    Push(24,MyStack);
+    Push(25,MyStack);
+    printf("Stack Size is :%d\n",MyStack->Size);
 
     PrintStack(MyStack);
+    printf("///////////////////////////\n\n");
+// testing deleting//
+int i ;
+for(i=0; i < 5 ; i++){
+    delvar=Pop(MyStack);
+    printf("Stack Size is :%d \n\n",MyStack->Size);
+    printf("element %d has been deleleted \n",delvar->data);
+    PrintStack(MyStack);
+
+}
+printf("element %d has been deleleted \n",delvar->data);
+
     return 0;
 }

@@ -11,7 +11,7 @@ data *head;
 int Size;
 }Stacks;
 
-void pop(int value,Stacks *pointer){
+void Push(int value,Stacks *pointer){
 
 
     data *dataVar = malloc(sizeof(data));
@@ -58,5 +58,45 @@ void PrintStack(Stacks *pointer){
         }
         }
 }
+data *Pop(Stacks *pointer) {
+    data *sub;
+    data *cop = NULL;
+
+
+    if (pointer->head == NULL) {
+        printf("Stack is empty\n");
+    } else {
+
+        sub = pointer->head;
+        pointer->head = pointer->head->next;
+
+
+        if (pointer->Size > 1) {
+            cop = malloc(sizeof(data));
+            if (cop == NULL) {
+                printf("Memory allocation failed\n");
+                return NULL;
+            }
+            cop->data = sub->data;
+            free(sub);
+        } else {
+
+            cop = malloc(sizeof(data));
+            if (cop == NULL) {
+                printf("Memory allocation failed\n");
+                return NULL;
+            }
+            cop->data = sub->data;
+            free(sub);
+            pointer->head = NULL;
+        }
+
+        pointer->Size--;
+    }
+
+    return cop;
+}
+
+
 
 #endif // STACK_H_INCLUDED
