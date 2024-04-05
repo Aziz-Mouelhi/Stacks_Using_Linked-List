@@ -97,6 +97,42 @@ data *Pop(Stacks *pointer) {
     return cop;
 }
 
+#include <stdbool.h> // Include for bool data type
+
+typedef struct Data {
+    int data; // Assuming data is an integer for demonstration
+    struct Data* next;
+} Data;
+
+typedef struct Stack {
+    Data* head;
+    int Size;
+} Stack;
+
+int CompareStack(Stack* pointer1, Stack* pointer2) {
+    // comparing size //
+    if (pointer1->Size != pointer2->Size) {
+        return 1;
+    } else {
+        Data* p1 = pointer1->head;
+        Data* p2 = pointer2->head;
+        int i = 0; 
+        bool test = true;
+        bool result = true;
+        while (i < pointer1->Size && test) {
+            if (p1->data == p2->data) {
+                p1 = p1->next; 
+                p2 = p2->next; 
+            } else {
+                result = false; 
+                break; 
+            }
+            i++;
+        }
+        return result ? 0 : 1; // If result is true, return 0, else return 1
+    }
+}
+
 
 
 #endif // STACK_H_INCLUDED

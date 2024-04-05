@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1710606320 source:c:\users\elmouelhi\desktop\pilelinked\stacks_using_linked-list\stack_linked\main.c
+1712315916 source:c:\users\elmouelhi\desktop\pilelinked\stacks_using_linked-list\stack_linked\main.c
 	<stdio.h>
 	<stdlib.h>
+	<stdbool.h>
 	"stack.h"
 
-1710606973 c:\users\elmouelhi\desktop\pilelinked\stacks_using_linked-list\stack_linked\stack.h
+1712315518 c:\users\elmouelhi\desktop\pilelinked\stacks_using_linked-list\stack_linked\stack.h
+	<stdbool.h>
 
